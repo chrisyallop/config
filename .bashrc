@@ -16,6 +16,12 @@ source ~/.bashrc.work
 #See http://progit.org/book/ch2-7.htm l for more details.
 source ~/.git-completion.bash
 
+# configure set up for versioning $HOME hidden files
+
+alias config='git --git-dir=$HOME/.config.git/ --work-tree=$HOME'
+
+# Set up aliases
+
 alias ga="git add"
 alias gaa="git add --all"
 alias gb="git branch"

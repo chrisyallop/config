@@ -1,0 +1,30 @@
+[user]
+	name = Chris Yallop
+	email = chris.yallop@adnams.co.uk
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	mg = merge --no-ff
+	wc = whatchanged
+	l  = log
+	cb = checkout -b
+	bd = branch -d
+[commit]
+	template = /Users/chris/.git-commit-message-template
+[merge]
+	keepBackup = false;
+	tool = p4merge
+[mergetool "p4merge"]
+	cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	keepTemporaries = false
+	trustExitCode = false
+	keepBackup = false
+[diff]
+	external = p4diff
